@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <title>Store Setting - Pay@Table</title>
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="./assets/main.css" rel="stylesheet">
+    <!-- Fonts from Google Fonts -->
+    <link href="./assets/font.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+    <style id="style-1-cropbar-clipper">
+    /* Copyright 2014 Evernote Corporation. All rights reserved. */
+
+    .en-markup-crop-options {
+        top: 18px !important;
+        left: 50% !important;
+        margin-left: -100px !important;
+        width: 200px !important;
+        border: 2px rgba(255, 255, 255, .38) solid !important;
+        border-radius: 4px !important;
+    }
+
+    .en-markup-crop-options div div:first-of-type {
+        margin-left: 0px !important;
+    }
+    </style>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="./assets/custom.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="./assets/flatpickr.min.css">
+    <script src="./assets/bignumber.min.js"></script>
+    <script src="./assets/flatpickr.min.js"></script>
+    <script src="./assets/flatpickr-i18n/ja.js"></script>
+    <script src="./assets/jquery.qrcode.min.js"></script>
+    <script src="./assets/utf8.min.js"></script>
+    <script src="//beta.blockchain.z.com/static/client/lib/eth-client.js"></script>
+    <script src="./js/eth-util.js"></script>
+    <script src="./js/abis.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/local-storage.js"></script>
+    <script src="./js/demo-util.js"></script>
+    <script src="./locale/demo-msg.js"></script>
+    <script src="./common.js"></script>
+    <script src="./store-setting.js"></script>
+</head>
+
+<body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./store-setting.html"><b><span demo-msg="common.page.store-setting"></span></b></a>
+            </div>
+            <div class="navbar-collapse collapse" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="./index.html" demo-msg="common.page.index"></a>
+                    </li>
+                    <li>
+                        <a href="./store-setting.html" demo-msg="common.page.store-setting"></a>
+                    </li>
+                    <li>
+                        <a href="./purchase-payment.html" demo-msg="common.page.purchase-payment"></a>
+                    </li>
+                    <li>
+                        <a href="./check-payment.html" demo-msg="common.page.check-payment"></a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div id="main-area" class="container page-top-space" style="display: none;">
+        <div class="row centered" style="margin-bottom: 20px;">
+            <pre style="width: 80%; width:700px; margin-left:auto; margin-right:auto;" demo-msg="store-setting.content.demo-explain"></pre>
+        </div>
+        <div class="row centered">
+            <div class="form-msg centered" demo-msg="common.caption.store-setting.target-token"></div>
+            <div class="table-center top-space input-table">
+                <div class="row">
+                    <div demo-msg="common.caption.store-setting.token-address"></div>
+                    <div class="content-cell">
+                        <input class="form-control" id="token-address" disabled>
+                    </div>
+                </div>
+                <div class="row">
+                    <div demo-msg="common.caption.store-setting.symbol"></div>
+                    <div class="content-cell">
+                        <input class="form-control" id="symbol" disabled>
+                    </div>
+                </div>
+                <div class="row">
+                    <div demo-msg="common.caption.store-setting.token-name"></div>
+                    <div class="content-cell">
+                        <input class="form-control" id="token-name" disabled>
+                    </div>
+                </div>
+                <div class="row">
+                    <div demo-msg="common.caption.store-setting.token-unit-price"></div>
+                    <div class="content-cell">
+                        <input class="form-control" id="token-unit-price" maxlength="5" style="text-align: right; width: 100px;" placeholder="1.0">
+                    </div>
+                </div>
+            </div>
+            <div class="table-center top-space input-table">
+                <button id="button" onclick="setTokenRate()" class="btn btn-warning btn-lg" demo-msg="store-setting.form.token-price.submit"></button>
+            </div>
+        </div>
+    </div>
+    <div class="row centered tail-space"></div>
+    <!-- /container -->
+    <div id="dialog"></div>
+    <div id="loader-bg">
+        <div id="loader">
+            <img src="./assets/loading.gif" width="80" height="80" alt="Now Loading..." />
+            <p>Now Loading...</p>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./assets/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+.input-table {
+    display:table;
+}
+.input-table .row {
+    display:table-row;
+}
+.input-table .row>div {
+    display:table-cell;
+    margin:15px;
+    padding:4px 16px;
+    vertical-align: middle;
+}
+
+
+.list-table {
+    display:table;
+    border: solid 1px #3498db;
+}
+.list-table .row {
+    display:table-row;
+}
+.list-table .row>div {
+    display:table-cell;
+    margin:15px;
+    padding:8px 16px;
+    border: solid 1px #3498db;
+    background-color: #ffffff;
+    vertical-align: middle;
+}
+.list-table .title {
+    background-color: #d6eaf8 !important;
+    font-weight: bold;
+    color: #1a4c6d;
+}
+.list-table .sum {
+    border-top: 0px !important;
+    background-color: #f0f0f0 !important;
+    font-weight: bold;
+    color: #1a4c6d;
+}
+.list-table .simple-bold {
+    background-color: #ffffff !important;
+    font-weight: bold;
+    color: #1a4c6d;
+}
+.list-table .simple {
+    background-color: #ffffff !important;
+}
+.list-table .gray {
+    background-color: #f0f0f0 !important;
+}
+.list-table .l {
+    border-right: 0px !important;
+    text-align: left !important;
+}
+.list-table .r {
+    border-left: 0px !important;
+    text-align: right !important;
+}
+.list-table .strong {
+    font-weight: bold;
+}
+
+.list-table .inside-table {
+    display:table;
+    border: 0px;
+}
+.list-table .inside-table .row {
+    display:table-row;
+}
+.list-table .inside-table .row>div {
+    display:table-cell;
+    margin:0px;
+    padding:0px 2px;
+    border: 0px;
+    vertical-align: middle;
+}
+
+.list-table-simple {
+    display:table;
+    border: solid 1px #666666;
+}
+.list-table-simple .row {
+    display:table-row;
+}
+.list-table-simple .row>div {
+    display:table-cell;
+    margin:2px;
+    padding:4px 16px;
+    border: solid 1px #666666;
+    vertical-align: middle;
+}
+.list-table-simple .title {
+    background-color: #cccccc !important;
+    color: #333333;
+}
+
+td {
+    padding: 3px;
+}
+.top-button {
+    width: 280px;
+    margin-bottom: 30px;
+}
+
+.debug-form {
+    display: none;
+}
+
+.view-field {
+    margin-bottom: 15px;
+}
+
+.top-space-l {
+    margin-top: 30px;
+}
+
+.top-space {
+    margin-top: 15px;
+}
+
+.top-space-sm {
+    margin-top: 5px;
+}
+
+.bottom-space-form {
+    margin-bottom: 60px;
+}
+
+.bottom-space-form-thin {
+    margin-bottom: 30px;
+}
+
+.page-top-space {
+    margin-top: 80px;
+}
+
+.form-top-space {
+    margin-top: 60px;
+}
+
+.form-msg {
+    font-weight: bold;
+    color: #1a4c6d;
+}
+
+.tail-space {
+    margin-bottom: 30px;
+}
+
+pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    line-height: 1.428571429;
+    color: #333333;
+    word-break: normal;
+    word-wrap: normal;
+    background-color: #f5f5f5;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+}
+
+.ui-dialog .ui-dialog-title {
+    float: left;
+    margin: .1em 0;
+    white-space: nowrap;
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+    margin: .5em .4em .5em 0;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.ui-widget-header {
+    border: 1px solid #aaaaaa;
+    background: #1a4c6d;
+    color: white;
+    font-weight: bold;
+}
+.ui-dialog .ui-dialog-titlebar {
+    padding: .4em 1em;
+    position: relative;
+    border: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.ui-dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: .0em;
+    outline: 0;
+}
+
+
+.table-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.select-sm {
+    height: 32px;
+    padding: 2px 12px;
+    font-size: 12px;
+}
+
+.input-sm {
+    height: 32px;
+    padding: 2px 12px;
+    font-size: 12px;
+}
+
+.font-sm {
+    font-size: 13px;
+}
+
+#loader-bg {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: #ffffff;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+#loader {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+    text-align: center;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.simple-link {
+    cursor: hand;
+    cursor:pointer;
+    text-decoration: underline;
+}

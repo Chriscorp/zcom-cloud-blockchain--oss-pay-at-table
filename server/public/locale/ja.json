@@ -1,0 +1,148 @@
+{
+    "common": {
+        "page": {
+            "index": "ホーム",
+            "store-setting": "店舗設定",
+            "purchase-payment": "購入 - 支払",
+            "check-payment": "支払確認"
+        },
+        "content": {
+            "select": "選択..",
+            "demo-explain": "Pay@Table のデモページです。\n\n画面上の操作で、\n・店舗側での支払可能トークンの設定\n・実際の購入手続き\n・店舗側の支払い状況確認\nまでの一通りのフローを確認できます。",
+            "payer": "支払ユーザ"
+        },
+        "caption": {
+            "store-setting": {
+                "target-token": "取扱トークン",
+                "token-address": "トークンアドレス",
+                "symbol": "シンボル",
+                "token-name": "トークン名",
+                "token-unit-price": "トークン単価"
+            },
+            "purchase-payment": {
+                "slip-id": "伝票ID",
+                "menu": "メニュ",
+                "unit-price": "単価",
+                "number": "個数",
+                "total": "会計金額",
+                "order": "注文",
+                "payment": "支払額",
+                "billing-amount": "請求額",
+                "payment-balance": "支払残高",
+                "retained-balance": "保有残高",
+                "account-amount": "会計額",
+                "account-balance": "会計残高",
+                "cash-payment": "現金支払い",
+                "paid": "支払済",
+                "pay": "支払実行"
+
+            },
+            "check-payment": {
+                "token-amount": "トークン支払量",
+                "token-cash": "トークン現金換算",
+                "cash-amount": "現金支払額"
+            },
+            "smart-phone": "スマートフォン",
+            "register-terminal": "レジ端末",
+            "payer": "支払者",
+            "refund": "払い戻し",
+            "legal-currency": "法定通貨",
+            "ok": "OK",
+            "cancel": "キャンセル"
+        },
+        "dialog": {
+            "err-no-setup": {
+                "title": "デモ用環境未設定",
+                "msg": "デモ用の環境が準備されていません。\n\n環境準備のために下記登録を行います。\n\n1. デモ用にユーザアカウントを2つ作成しローカルストレージに記録。\n2. 新規トークンを発行し、1,000,000を各ユーザアカウントに付与。\n3. デモ用店舗を作成し、受取トークン単価を1.0として指定。\n\nこの処理には多少時間がかかります。"
+            },
+            "err-required": {
+                "title": "入力エラー",
+                "msg": "未入力項目があります。"
+            }
+        }
+    },
+    "index": {
+        "title": "メニュ"
+    },
+    "store-setting": {
+        "content": {
+            "demo-explain": "トークンでの支払いを受け取りたい店舗は、利用可能なトークンと、その単価を設定します。\n\n店舗は取扱い可能なトークンを自由に指定できますが、ここでは簡便のためデモ用に作成したトークンを使用します。\n（実サービスでは、複数のトークンを指定することも可能です。）\n\nデモではトークン単価を0.1から100.0までとしていますが、実際には店舗が自由に設定できます。"
+        },
+        "form": {
+            "token-price": {
+                "submit": "設定"
+            }
+        },
+        "dialog": {
+            "err-invalid-value": {
+                "title": "入力値不正",
+                "msg": "トークン単価の設定が不正です。\n\n0.1 から 100.0 までの数値を入力してください。"
+            },
+            "complete": {
+                "title": "トークン設定完了",
+                "msg": "店舗で利用可能なトークンを設定しました。"
+            }
+        }
+    },
+    "purchase-payment": {
+        "content": {
+            "menu-0" : {"name" :"商品１", "price" : "150"},
+            "menu-1" : {"name" :"商品２", "price" : "180"}
+        },
+        "form": {
+            "qr": {
+                "title": "支払用QRコード"
+            },
+            "enter": {
+                "submit": "入店"
+            },
+            "add-order": {
+                "submit": "注文"
+            },
+            "payment": {
+                "pay": "トークン支払い\n（スマートフォンアプリでのQRコード読取）",
+                "check": "支払い確認\n（レジでのQRコード読取）"
+            }
+        },
+        "dialog": {
+            "err-retained-balance": {
+                "title": "残高不足",
+                "msg": "保有残高が不足しているため支払いできません。"
+            },
+            "err-not-number": {
+                "title": "入力値不正",
+                "msg": "数値を入力してください。"
+            },
+            "err-minus-total": {
+                "title": "合計金額不正",
+                "msg": "会計金額がマイナスになるため処理できません。"
+            },
+            "err-fail-to-pay": {
+                "title": "支払失敗",
+                "msg": "支払い処理に失敗しました。"
+            },
+            "refund-complete": {
+                "title": "払戻完了",
+                "msg": "支払われたトークンの払戻が完了しました。"
+            },
+            "complete": {
+                "title": "支払完了",
+                "msg": "トークンでの支払いが完了しました。"
+            }
+        }
+    },
+    "check-payment": {
+        "content": {
+            "payment-detail" : "支払詳細",
+            "payment-status" : "支払状況一覧",
+            "store-balance" : "店舗残高"
+        },
+        "form": {
+            "reset": {
+                "submit": "支払状況一覧リセット\n（デモ検証用）"
+            }
+        },
+        "dialog": {
+        }
+    }
+}

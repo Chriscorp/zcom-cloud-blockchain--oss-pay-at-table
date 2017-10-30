@@ -1,0 +1,148 @@
+{
+    "common": {
+        "page": {
+            "index": "HOME",
+            "store-setting": "Store Setting",
+            "purchase-payment": "Purchase - Payment",
+            "check-payment": "Check Payment"
+        },
+        "content": {
+            "select": "select..",
+            "demo-explain": "This is Pay@Table's demo page.\n\nUse this screen to:\n· Configure a payment token on the shop side\n· Make a purchase\n· Confirm payment status at the store side\nYou can check the complete flow.",
+            "payer": "Payer"
+        },
+        "caption": {
+            "store-setting": {
+                "target-token": "Target Token",
+                "token-address": "Token Address",
+                "symbol": "Symbol",
+                "token-name": "Token Name",
+                "token-unit-price": "Token Unit Price"
+            },
+            "purchase-payment": {
+                "slip-id": "SlipID",
+                "menu": "MENU",
+                "unit-price": "Unit Price",
+                "number": "Count",
+                "total": "Total",
+                "order": "Order",
+                "payment": "Payment",
+                "billing-amount": "Billing Amount",
+                "payment-balance": "Payment Balance",
+                "retained-balance": "Retained Balance",
+                "account-amount": "Account Amount",
+                "account-balance": "Account Balance",
+                "cash-payment": "Cash Payment",
+                "paid": "Paid",
+                "pay": "Pay"
+
+            },
+            "check-payment": {
+                "token-amount": "Token Amount",
+                "token-cash": "Token Cash Value",
+                "cash-amount": "Cash Amount"
+            },
+            "smart-phone": "Smart Phone",
+            "register-terminal": "Register Terminal",
+            "payer": "Payer",
+            "refund": "Refund",
+            "legal-currency": "Legal Currency",
+            "ok": "OK",
+            "cancel": "CANCEL"
+        },
+        "dialog": {
+            "err-no-setup": {
+                "title": "Demo environment not set",
+                "msg": "The demonstration environment is not prepared.\n\nClick 'OK' to prepare as follows:\n1. Create two user accounts for demonstration and record them in local storage.\n2. Issue a new token and grant 1,000,000 to each user account.\n3. Create a demonstration store and designate the receiving token unit price as 1.0.\n\nThis process will take a few seconds."
+            },
+            "err-required": {
+                "title": "INPUT ERROR",
+                "msg": "There are missing items."
+            }
+        }
+    },
+    "index": {
+        "title": "MENU"
+    },
+    "store-setting": {
+        "content": {
+            "demo-explain": "For stores that want to receive payments with tokens, set available tokens and their unit price.\n\nShops can freely specify handlable tokens, but here we use tokens already created for the demo for convenience.\n(In an actual service, it is also possible to specify multiple tokens.)\n\nIn the demonstration, the token unit price is set from 0.1 to 100.0, but in an actual service you are free to specify any price."
+        },
+        "form": {
+            "token-price": {
+                "submit": "SET"
+            }
+        },
+        "dialog": {
+            "err-invalid-value": {
+                "title": "Invalid input value",
+                "msg": "The token unit price is incorrect.\n\nPlease enter a number between 0.1 and 100.0."
+            },
+            "complete": {
+                "title": "Token Setup Completed",
+                "msg": "Available token at this store has been set."
+            }
+        }
+    },
+    "purchase-payment": {
+        "content": {
+            "menu-0" : {"name" :"GOODS 1", "price" : "150"},
+            "menu-1" : {"name" :"GOODS 2", "price" : "180"}
+        },
+        "form": {
+            "qr": {
+                "title": "QR-CODE for Payment"
+            },
+            "enter": {
+                "submit": "Enter the Store"
+            },
+            "add-order": {
+                "submit": "Order"
+            },
+            "payment": {
+                "pay": "Token payment\n(Simulates reading the QR code with smartphone application)",
+                "check": "Payment confirmation\n(Simulates reading the QR code at the register)"
+            }
+        },
+        "dialog": {
+            "err-retained-balance": {
+                "title": "Insufficient funds",
+                "msg": "You can not pay because the holding balance is insufficient."
+            },
+            "err-not-number": {
+                "title": "Invalid input value",
+                "msg": "Please enter a numerical value."
+            },
+            "err-minus-total": {
+                "title": "Total amount illegal",
+                "msg": "We can not process because the accounting amount becomes negative."
+            },
+            "err-fail-to-pay": {
+                "title": "Payment failed",
+                "msg": "Failed to process payment."
+            },
+            "refund-complete": {
+                "title": "Refund Completed",
+                "msg": "The refund of the token paid has been completed."
+            },
+            "complete": {
+                "title": "Payment complete",
+                "msg": "Payment on token has been completed."
+            }
+        }
+    },
+    "check-payment": {
+        "content": {
+            "payment-detail" : "Payment Detail",
+            "payment-status" : "Payment Status List",
+            "store-balance" : "Store Balance"
+        },
+        "form": {
+            "reset": {
+                "submit": "Reset payment status list\n(for demonstration purposes)"
+            }
+        },
+        "dialog": {
+        }
+    }
+}
